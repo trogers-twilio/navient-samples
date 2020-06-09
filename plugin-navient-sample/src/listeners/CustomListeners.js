@@ -27,7 +27,7 @@ const hangupNonWebRtcCall = async (task) => {
     console.error('Unable to parse remove participant response to JSON.', error);
   }
   console.debug('*** Conference participant remove response:', response);
-}
+};
 
 Flex.Actions.addListener('beforeWrapupTask', async (payload, abort) => {
   if (FlexState.isWorkerUsingWebRTC()) {
@@ -51,4 +51,4 @@ Flex.Actions.addListener('beforeHangupCall', async (payload, abort) => {
   }
   await hangupNonWebRtcCall(task);
   abort();
-})
+});
