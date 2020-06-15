@@ -114,3 +114,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Twilio serverless build files not suitable for cross environment sharing
+.twilio-functions
