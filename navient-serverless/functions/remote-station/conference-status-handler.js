@@ -62,26 +62,5 @@ exports.handler = async function(context, event, callback) {
     console.log('Worker participant already joined');
   }
 
-  // const matchingWorkers = await client.taskrouter
-  //   .workspaces(WORKSPACE_SID)
-  //   .workers
-  //   .list({
-  //     targetWorkersExpression: `contact_uri == ${To}`
-  //   });
-
-  // const targetWorkerSid = matchingWorkers && matchingWorkers[0].sid;
-
-  // const twiml = new Twilio.twiml.VoiceResponse();
-
-  // const dial = twiml.dial({
-  //   callerId: From
-  // });
-  // dial.conference({
-  //   endConferenceOnExit: false,
-  //   startConferenceOnEnter: false,
-  //   statusCallback: `https://${DOMAIN_NAME}/conference-status-handler`,
-  //   statusCallbackEvent: 'start end join leave'
-  // }, targetWorkerSid);
-
   callback(null, {});
 };
