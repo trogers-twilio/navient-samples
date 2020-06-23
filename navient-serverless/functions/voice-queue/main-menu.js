@@ -324,6 +324,7 @@ exports.handler = async function(context, event, callback) {
         message = `${prompts.pressOneForMenu}.`;
         const gather = twiml.gather({
           input: 'dtmf',
+          numDigits: 1,
           timeout: '2',
           action: prepareTwimlUrl(domain + '/voice-queue/main-menu?mode=mainProcess', language, voice)
         });
@@ -341,7 +342,8 @@ exports.handler = async function(context, event, callback) {
 
         const gather = twiml.gather({
           input: 'dtmf',
-          timeout: '1',
+          numDigits: 1,
+          timeout: '2',
           action: prepareTwimlUrl(domain + '/voice-queue/main-menu?mode=menuProcess', language, voice)
         });
         gather.say(sayOptions, message);

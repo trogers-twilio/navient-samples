@@ -230,7 +230,7 @@ class InQueueVoicemailComponent extends React.Component {
     }
     //
     //  disable the call button
-    this.vmCallButtonAccessiblity(true);
+    //this.vmCallButtonAccessiblity(true);
     //this.props.vmRecordButtonDisable(false); //  enable the Record button
     let phoneTo = this.props.task.attributes.to;
     let queueSid = this.props.task.queueSid;

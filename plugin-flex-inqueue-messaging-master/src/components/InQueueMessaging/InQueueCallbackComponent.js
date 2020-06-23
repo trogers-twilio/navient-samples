@@ -100,7 +100,7 @@ class InQueueCallbackComponent extends React.Component {
       return;
     }
     //  disable the call button
-    this.cbCallButtonAccessiblity(true);
+    //this.cbCallButtonAccessiblity(true);
 
     //  disable the Place call button
     //this.props.cbCallButtonDisable(true);
